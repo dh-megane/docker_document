@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: sqlsrv
+    #build: .
+    container_name: sqlserver
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P@SSWORD
+      - MSSQL_COLLATION=Japanese_CI_AS
+    tty: true
